@@ -11,6 +11,9 @@
 <meta name="apple-mobile-web-app-title" content="Italy 2026">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,7 +53,7 @@
     position: absolute; inset: 0;
     background: 
       linear-gradient(160deg, rgba(26,43,74,0.85) 0%, rgba(196,98,45,0.6) 50%, rgba(26,43,74,0.9) 100%),
-      url('https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=1600&q=80') center/cover no-repeat;
+      url('https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=1200&q=75') center/cover no-repeat;
     animation: slowZoom 20s ease-in-out infinite alternate;
   }
 
@@ -819,7 +822,6 @@
     border: 1px solid var(--gold);
     border-radius: 50px;
     padding: 0.85rem 1.8rem;
-    display: none;
     align-items: center;
     gap: 0.75rem;
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
@@ -830,13 +832,32 @@
     letter-spacing: 1px;
     color: white;
     white-space: nowrap;
+    max-width: calc(100vw - 2rem);
   }
 
+  #install-banner.visible { display: flex; }
   #install-banner:hover { background: #243d63; }
   #install-banner .install-icon { font-size: 1.1rem; }
   #install-dismiss {
     background: none; border: none; color: rgba(255,255,255,0.4);
-    cursor: pointer; font-size: 1rem; padding: 0 0 0 0.5rem; line-height: 1;
+    cursor: pointer; font-size: 1.1rem; line-height: 1;
+    padding: 0.5rem; margin: -0.5rem -0.5rem -0.5rem 0.25rem;
+    min-width: 32px; min-height: 32px;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-bg,
+    .scroll-hint,
+    .hero-content { animation: none !important; }
+    * { transition-duration: 0.01ms !important; }
+  }
+
+  /* Active scroll-spy state on nav links */
+  nav a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
   }
 
   /* ── PHRASES ── */
@@ -937,10 +958,10 @@
 <body>
 
 <!-- ══ INSTALL BANNER ══ -->
-<div id="install-banner">
-  <span class="install-icon">📱</span>
-  Add to Home Screen
-  <button id="install-dismiss" aria-label="Dismiss">✕</button>
+<div id="install-banner" role="dialog" aria-label="Install this site">
+  <span class="install-icon" aria-hidden="true">📱</span>
+  <span id="install-label">Add to Home Screen</span>
+  <button id="install-dismiss" aria-label="Dismiss install prompt">✕</button>
 </div>
 
 <!-- ══ HERO ══ -->
@@ -1036,7 +1057,7 @@
     <span class="stars">★ ★ ★ ★ ★</span>
     <h2><em>The Reason We're Going</em>Marillion<br>Live at Pompeii</h2>
 
-    <img src="marillion.jpg" alt="Marillion" style="
+    <img src="marillion.jpg" loading="lazy" decoding="async" alt="Marillion band promotional photo" style="
       width: 100%;
       max-width: 520px;
       border-radius: 16px;
@@ -1095,7 +1116,7 @@
   <div class="divider"></div>
 
   <div class="dest-full">
-    <img class="dest-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Pompeii ruins">
+    <img class="dest-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Ruins of Pompeii with Mount Vesuvius in the background">
     <div class="dest-body">
       <div class="dest-tag tag-pompeii">📍 Pompeii, Campania</div>
       <div class="dest-title">Frozen in Time</div>
@@ -1132,7 +1153,7 @@
   <div class="divider"></div>
 
   <div class="dest-full">
-    <img class="dest-img" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200&q=80" alt="Praiano Amalfi Coast">
+    <img class="dest-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=900&q=80" alt="Pastel houses of Praiano on the Amalfi Coast cliffside">
     <div class="dest-body">
       <div class="dest-tag tag-praiano">📍 Praiano, Amalfi Coast</div>
       <div class="dest-title">The Hidden Gem</div>
@@ -1173,7 +1194,7 @@
   <div class="divider"></div>
 
   <div class="dest-full">
-    <img class="dest-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80" alt="Naples Italy">
+    <img class="dest-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80" alt="Naples rooftops and waterfront">
     <div class="dest-body">
       <div class="dest-tag tag-naples">📍 Naples, Campania</div>
       <div class="dest-title">The Birthplace of Pizza</div>
@@ -1372,7 +1393,7 @@
 
   <div class="food-grid">
     <div class="food-card">
-      <img class="food-img" src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80" alt="Scialatielli pasta seafood">
+      <img class="food-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=700&q=80" alt="Scialatielli pasta with seafood">
       <div class="food-body">
         <div class="food-title">Scialatielli</div>
         <div class="food-subtitle">The Amalfi Coast's own pasta, born in Positano in 1978</div>
@@ -1381,7 +1402,7 @@
     </div>
 
     <div class="food-card">
-      <img class="food-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80" alt="Lemon dessert">
+      <img class="food-img" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=700&q=80" alt="Amalfi lemon dessert">
       <div class="food-body">
         <div class="food-title">Delizia al Limone</div>
         <div class="food-subtitle">The lemon dessert that tastes like the Amalfi Coast itself</div>
@@ -1765,23 +1786,68 @@
 </footer>
 
 <script>
-  // ── COUNTDOWN ──
-  const departure = new Date('2026-07-23T22:10:00-04:00'); // 10:10 PM Eastern
+  // ── COUNTDOWN (smart: pre-trip, during-trip, post-trip) ──
+  // Trip runs July 23 → August 1, 2026 (Eastern time for departure, local Italy for during-trip)
+  const departure = new Date('2026-07-23T22:10:00-04:00'); // 10:10 PM Eastern, BA1640
+  const tripEnd   = new Date('2026-08-02T00:00:00-04:00'); // end-of-day Aug 1 in ET (returns that day)
+
+  // Day 1 = July 23 (departure night). Titles mirror the itinerary <h3>s.
+  const tripDays = [
+    { date: '2026-07-23', title: '✈ Departure Night — Philadelphia' },
+    { date: '2026-07-24', title: '🛬 Arrive Naples → Check in to Pompeii' },
+    { date: '2026-07-25', title: '🏛 Pompeii Ruins + Marillion Night One' },
+    { date: '2026-07-26', title: '🏺 Herculaneum + Marillion Night Two' },
+    { date: '2026-07-27', title: '🚗 Travel to Praiano' },
+    { date: '2026-07-28', title: '🌊 Praiano + Positano' },
+    { date: '2026-07-29', title: '🕌 Amalfi Town + Ravello' },
+    { date: '2026-07-30', title: '🏝 Capri Day Trip' },
+    { date: '2026-07-31', title: '🌅 Last Morning → Naples' },
+    { date: '2026-08-01', title: '✈ Fly Home — Naples to Philadelphia' }
+  ];
+
+  const cdEl = document.getElementById('countdown');
+
+  function currentTripDayIndex(now) {
+    // Compare on Europe/Rome local date so the "today" matches the traveler's reality.
+    const romeDate = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit'
+    }).format(now); // YYYY-MM-DD
+    return tripDays.findIndex(d => d.date === romeDate);
+  }
+
   function updateCountdown() {
     const now = new Date();
     const diff = departure - now;
-    if (diff <= 0) {
-      document.getElementById('countdown').innerHTML = '<span class="departed-msg">🇮🇹 Buon viaggio! The adventure has begun!</span>';
+
+    if (diff > 0) {
+      // PRE-TRIP: classic countdown to wheels-up
+      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('cd-days').textContent  = String(days);
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+      document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
       return;
     }
-    const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const secs  = Math.floor((diff % (1000 * 60)) / 1000);
-    document.getElementById('cd-days').textContent  = String(days);
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
-    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+
+    if (now < tripEnd) {
+      // DURING-TRIP: show day N of 10 + today's plan
+      const idx = currentTripDayIndex(now);
+      if (idx >= 0) {
+        const today = tripDays[idx];
+        cdEl.innerHTML =
+          '<div style="width:100%;text-align:center;font-family:\'Playfair Display\',serif;">' +
+            '<div style="font-family:\'Montserrat\',sans-serif;font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Day ' + (idx + 1) + ' of ' + tripDays.length + '</div>' +
+            '<div style="font-size:1.5rem;font-style:italic;color:#fff;line-height:1.3;">' + today.title + '</div>' +
+          '</div>';
+      }
+      return;
+    }
+
+    // POST-TRIP: memento
+    cdEl.innerHTML = '<span class="departed-msg">🇮🇹 Che bella vacanza! Until next time…</span>';
   }
   updateCountdown();
   setInterval(updateCountdown, 1000);
@@ -1789,30 +1855,72 @@
   // ── PWA INSTALL PROMPT ──
   let deferredPrompt;
   const banner = document.getElementById('install-banner');
+  const bannerLabel = document.getElementById('install-label');
   const dismiss = document.getElementById('install-dismiss');
+  const DISMISS_KEY = 'installBannerDismissed';
+
+  const showBanner = (labelHtml) => {
+    if (sessionStorage.getItem(DISMISS_KEY)) return;
+    if (labelHtml) bannerLabel.innerHTML = labelHtml;
+    banner.classList.add('visible');
+  };
+  const hideBanner = () => banner.classList.remove('visible');
+
+  const isStandalone =
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone === true;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    banner.style.display = 'flex';
+    showBanner('Add to Home Screen');
   });
 
+  // iOS Safari doesn't fire beforeinstallprompt — show a Share-icon hint instead.
+  if (isIOS && !isStandalone) {
+    setTimeout(() => showBanner('Tap <strong>Share</strong> → <strong>Add to Home Screen</strong>'), 1500);
+  }
+
   banner.addEventListener('click', async (e) => {
-    if (e.target === dismiss) {
-      banner.style.display = 'none';
+    if (e.target === dismiss || dismiss.contains(e.target)) {
+      sessionStorage.setItem(DISMISS_KEY, '1');
+      hideBanner();
       return;
     }
-    banner.style.display = 'none';
     if (deferredPrompt) {
+      hideBanner();
       deferredPrompt.prompt();
       await deferredPrompt.userChoice;
       deferredPrompt = null;
     }
+    // iOS: tap-through does nothing — the user must use Share manually. Leave the banner up.
   });
 
-  window.addEventListener('appinstalled', () => {
-    banner.style.display = 'none';
-  });
+  window.addEventListener('appinstalled', hideBanner);
+
+  // ── SCROLL-SPY: highlight the current section in the nav ──
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+  const sectionEls = navLinks
+    .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sectionEls.length) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+          });
+          // Keep the active link in view within the horizontally-scrollable nav
+          const activeLink = navLinks.find(a => a.classList.contains('active'));
+          if (activeLink) activeLink.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sectionEls.forEach(el => spy.observe(el));
+  }
 
   // ── SERVICE WORKER ──
   if ('serviceWorker' in navigator) {
