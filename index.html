@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Italy 2026 · Marillion at Pompeii</title>
+<meta name="description" content="Our family trip to Italy — Pompeii, Praiano, Marillion Live at Pompeii, Naples. July 23 – August 1, 2026.">
+<meta name="theme-color" content="#1A2B4A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Italy 2026">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --terracotta: #C4622D;
+    --gold: #D4A843;
+    --cream: #FDF6EC;
+    --dark: #1C1209;
+    --olive: #6B7C3F;
+    --navy: #1A2B4A;
+    --warm-white: #FEFAF4;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--navy);
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      linear-gradient(160deg, rgba(26,43,74,0.85) 0%, rgba(196,98,45,0.6) 50%, rgba(26,43,74,0.9) 100%),
+      url('https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?w=1600&q=80') center/cover no-repeat;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes slowZoom {
+    from { transform: scale(1); }
+    to   { transform: scale(1.05); }
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    animation: fadeUp 1.2s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-flag { font-size: 3.5rem; margin-bottom: 1rem; display: block; }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+
+  .hero h1 em {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+    font-size: 0.65em;
+  }
+
+  .hero-dates {
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .hero-route {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .hero-route span { color: var(--gold); font-size: 1.2em; }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+    text-align: center;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+
+  nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--terracotta), var(--gold));
+    margin: 1.5rem 0 2.5rem;
+    border-radius: 2px;
+  }
+
+  /* ── FLIGHT CARDS ── */
+  .flight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 600px) { .flight-grid { grid-template-columns: 1fr; } }
+
+  .flight-card {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flight-card::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 120px; height: 120px;
+    background: rgba(212,168,67,0.1);
+    border-radius: 50%;
+  }
+
+  .flight-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .flight-route {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .flight-city {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .flight-code {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+  }
+
+  .flight-arrow { color: var(--gold); font-size: 1.5rem; flex: 1; text-align: center; }
+
+  .flight-details {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+  }
+
+  .flight-details strong { color: white; }
+
+  /* ── DESTINATION SECTIONS ── */
+  .dest-full {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  }
+
+  .dest-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .dest-body { padding: 2.5rem; }
+
+  .dest-tag {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .tag-pompeii { background: #FDE8E1; color: var(--terracotta); }
+  .tag-praiano { background: #E1EEF8; color: var(--navy); }
+  .tag-naples  { background: #FDF0DB; color: #B8730A; }
+
+  .dest-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .dest-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+
+  .dest-description {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .highlight-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+  .highlight-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  .highlight-text strong { display: block; color: var(--dark); margin-bottom: 2px; font-size: 0.92rem; }
+
+  /* ── ITINERARY ── */
+  .itinerary-full { background: #f7f2eb; padding: 5rem 0; }
+  .itinerary-full > .inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+  .timeline { margin-top: 2rem; }
+
+  .day-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 600px) {
+    .day-card { grid-template-columns: 1fr; }
+    .day-date { display: flex; align-items: center; gap: 1rem; }
+  }
+
+  .day-date {
+    text-align: center;
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+    padding: 1rem 0.5rem;
+  }
+
+  .day-date .dow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 4px;
+  }
+
+  .day-date .dom {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--gold);
+  }
+
+  .day-date .month {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  .day-content {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--terracotta);
+  }
+
+  .day-content.praiano { border-left-color: var(--navy); }
+  .day-content.naples  { border-left-color: var(--gold); }
+  .day-content.travel  { border-left-color: #aaa; }
+
+  .day-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .day-activities {
+    list-style: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #555;
+  }
+
+  .day-activities li {
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .day-activities li::before {
+    content: attr(data-icon);
+    position: absolute;
+    left: 0;
+  }
+
+  .day-tip {
+    margin-top: 1rem;
+    background: #fffbe6;
+    border-left: 3px solid var(--gold);
+    padding: 0.6rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #7a6a30;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* ── FOOD SECTION ── */
+  .food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 700px) { .food-grid { grid-template-columns: 1fr; } }
+
+  .food-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    background: white;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .food-body { padding: 1.5rem; }
+
+  .food-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .food-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--terracotta);
+    margin-bottom: 1rem;
+  }
+
+  .food-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: #555;
+  }
+
+  /* ── RESTAURANTS ── */
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .restaurant-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+    border-top: 3px solid var(--terracotta);
+  }
+
+  .restaurant-card.praiano { border-top-color: var(--navy); }
+  .restaurant-card.naples  { border-top-color: var(--gold); }
+
+  .rest-location {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+  }
+
+  .rest-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .rest-vibe {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .rest-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #666;
+  }
+
+  /* ── TIPS ── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .tip-card {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    color: white;
+  }
+
+  .tip-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+
+  .tip-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--gold);
+  }
+
+  .tip-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  footer strong { color: var(--gold); font-size: 1.5rem; display: block; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
+
+  /* ── CONCERT HERO ── */
+  .concert-hero {
+    background: var(--dark);
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .concert-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(212,168,67,0.15) 0%, transparent 70%);
+  }
+
+  .concert-hero .stars {
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: block;
+    opacity: 0.7;
+  }
+
+  .concert-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .concert-hero h2 em {
+    display: block;
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+    font-size: 0.55em;
+    margin-bottom: 0.5rem;
+  }
+
+  .concert-hero .venue {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 1.5rem;
+  }
+
+  .concert-dates {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .concert-date-pill {
+    background: rgba(212,168,67,0.15);
+    border: 1px solid rgba(212,168,67,0.4);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    color: white;
+  }
+
+  .concert-date-pill .night {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .concert-date-pill .date-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .concert-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .concert-info-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+
+  .concert-info-card .ci-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
+
+  .concert-info-card .ci-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .concert-info-card .ci-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .sold-out-badge {
+    display: inline-block;
+    background: var(--terracotta);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  .pink-floyd-note {
+    max-width: 680px;
+    margin: 2.5rem auto 0;
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid var(--gold);
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-radius: 0 8px 8px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  .pink-floyd-note strong { color: var(--gold); font-style: normal; }
+
+  /* ── COUNTDOWN ── */
+  .countdown {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .countdown-unit {
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(212,168,67,0.3);
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    min-width: 72px;
+  }
+
+  .countdown-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+
+  .countdown-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+    display: block;
+  }
+
+  .countdown-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .departed-msg {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--gold);
+  }
+
+  /* ── INSTALL BUTTON ── */
+  #install-banner {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    background: var(--navy);
+    border: 1px solid var(--gold);
+    border-radius: 50px;
+    padding: 0.85rem 1.8rem;
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    white-space: nowrap;
+  }
+
+  #install-banner:hover { background: #243d63; }
+  #install-banner .install-icon { font-size: 1.1rem; }
+  #install-dismiss {
+    background: none; border: none; color: rgba(255,255,255,0.4);
+    cursor: pointer; font-size: 1rem; padding: 0 0 0 0.5rem; line-height: 1;
+  }
+
+  /* ── PHRASES ── */
+  .phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .phrase-category {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+  }
+
+  .phrase-cat-header {
+    background: var(--navy);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .phrase-cat-icon { font-size: 1.2rem; }
+
+  .phrase-cat-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .phrase-list { padding: 0.75rem 0; }
+
+  .phrase-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    border-bottom: 1px solid #f5f0ea;
+    align-items: start;
+  }
+
+  .phrase-item:last-child { border-bottom: none; }
+
+  .phrase-italian {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--terracotta);
+    font-weight: 600;
+  }
+
+  .phrase-english {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  .phrase-english .pronun {
+    display: block;
+    font-size: 0.65rem;
+    color: #aaa;
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .band {
+    background: var(--terracotta);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+
+  .band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .band p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ══ INSTALL BANNER ══ -->
+<div id="install-banner">
+  <span class="install-icon">📱</span>
+  Add to Home Screen
+  <button id="install-dismiss" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-flag">🇮🇹</span>
+    <h1>La Dolce Vita<em>Our Family Trip to Italy</em></h1>
+    <div class="hero-dates">July 23 &nbsp;—&nbsp; August 1, 2026</div>
+    <div class="hero-route">
+      Philadelphia <span>✈</span> Naples <span>→</span> Pompeii <span>→</span> Praiano <span>→</span> Naples <span>✈</span> Philadelphia
+    </div>
+    <div style="margin-top:1.5rem; font-family:'Montserrat',sans-serif; font-size:0.75rem; letter-spacing:3px; color:var(--gold); text-transform:uppercase;">🎸 &nbsp; Including: Marillion Live at Pompeii &nbsp; 🎸</div>
+
+    <div class="countdown" id="countdown">
+      <span class="countdown-title" style="width:100%; margin-bottom:0.25rem;">✈ departure in</span>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-days">—</span><span class="countdown-label">Days</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-hours">—</span><span class="countdown-label">Hours</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-mins">—</span><span class="countdown-label">Minutes</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-secs">—</span><span class="countdown-label">Seconds</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">▾ &nbsp; scroll to explore</div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#flights">✈ Flights</a>
+  <a href="#concerts">🎸 Concerts</a>
+  <a href="#pompeii">🏛 Pompeii</a>
+  <a href="#praiano">🌊 Praiano</a>
+  <a href="#naples">🍕 Naples</a>
+  <a href="#itinerary">📅 Itinerary</a>
+  <a href="#food">🍝 Food</a>
+  <a href="#restaurants">🍽 Restaurants</a>
+  <a href="#phrases">🇮🇹 Phrases</a>
+  <a href="#tips">💡 Tips</a>
+</nav>
+
+<!-- ══ FLIGHTS ══ -->
+<section id="flights">
+  <div class="section-label">Getting There</div>
+  <h2 class="section-title">Our <em>Flights</em></h2>
+  <div class="divider"></div>
+  <p style="font-size:1.15rem;line-height:1.8;color:#555;max-width:680px;">Both flights are operated by American Airlines on behalf of British Airways, aboard the comfortable Boeing 787 Dreamliner. Terminal A at PHL both ways.</p>
+
+  <div class="flight-grid">
+    <div class="flight-card">
+      <div class="flight-type">✈ Outbound · BA 1640</div>
+      <div class="flight-route">
+        <div>
+          <div class="flight-city">Philadelphia</div>
+          <div class="flight-code">PHL · Terminal A</div>
+        </div>
+        <div class="flight-arrow">→</div>
+        <div>
+          <div class="flight-city">Naples</div>
+          <div class="flight-code">NAP · Italy</div>
+        </div>
+      </div>
+      <div class="flight-details">
+        <strong>Thu 23 July, 10:10 PM</strong> → <strong>Fri 24 July, 1:00 PM</strong><br>
+        Duration: 8 hrs 50 min &nbsp;·&nbsp; Boeing 787<br>
+        Economy Basic · Operated by American Airlines
+      </div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-type">✈ Return · BA 1639</div>
+      <div class="flight-route">
+        <div>
+          <div class="flight-city">Naples</div>
+          <div class="flight-code">NAP · Italy</div>
+        </div>
+        <div class="flight-arrow">→</div>
+        <div>
+          <div class="flight-city">Philadelphia</div>
+          <div class="flight-code">PHL · Terminal A</div>
+        </div>
+      </div>
+      <div class="flight-details">
+        <strong>Sat 1 August, 12:00 PM</strong> → <strong>Sat 1 August, 4:05 PM</strong><br>
+        Duration: 10 hrs 5 min &nbsp;·&nbsp; Boeing 787<br>
+        Economy Basic · Operated by American Airlines
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARILLION CONCERTS ══ -->
+<div class="concert-hero" id="concerts">
+  <div style="position:relative; max-width:900px; margin:0 auto;">
+    <span class="stars">★ ★ ★ ★ ★</span>
+    <h2><em>The Reason We're Going</em>Marillion<br>Live at Pompeii</h2>
+
+    <img src="marillion.jpg" alt="Marillion" style="
+      width: 100%;
+      max-width: 520px;
+      border-radius: 16px;
+      margin: 2rem auto 0;
+      display: block;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(212,168,67,0.3);
+    ">
+
+    <div class="venue">Anfiteatro di Pompei &nbsp;·&nbsp; Pompei, Italy &nbsp;·&nbsp; BOP – Beats of Pompeii III</div>
+
+    <div class="concert-dates">
+      <div class="concert-date-pill" style="opacity:0.6; border-style: dashed;">
+        <div class="night">🎫 Night One · Seeking Resale</div>
+        <div class="date-text">Saturday, July 25, 2026</div>
+      </div>
+      <div class="concert-date-pill" style="border-color: var(--gold); background: rgba(212,168,67,0.2);">
+        <div class="night">✅ Night Two · Tickets Confirmed</div>
+        <div class="date-text">Sunday, July 26, 2026</div>
+      </div>
+    </div>
+
+    <div class="concert-info-grid">
+      <div class="concert-info-card">
+        <span class="ci-icon">🎭</span>
+        <div class="ci-title">The Venue</div>
+        <div class="ci-text">The ancient Roman Amphitheatre of Pompeii — one of the oldest surviving Roman amphitheatres in the world, built around 70 BC. An almost incomprehensibly historic setting for a rock concert.</div>
+      </div>
+      <div class="concert-info-card">
+        <span class="ci-icon">🎬</span>
+        <div class="ci-title">Being Filmed</div>
+        <div class="ci-text">The entire concert will be professionally filmed and released as an official live album and Blu-ray. You'll be part of Marillion history — and on the recording!</div>
+      </div>
+      <div class="concert-info-card">
+        <span class="ci-icon">🎫</span>
+        <div class="ci-title">Tickets</div>
+        <div class="ci-text">We have confirmed tickets for <strong style="color:var(--gold)">Night Two (Sunday July 26)</strong>. Night one sold out in two minutes — we're currently hunting resale tickets for Saturday July 25. Fingers crossed!</div>
+      </div>
+      <div class="concert-info-card">
+        <span class="ci-icon">🎵</span>
+        <div class="ci-title">The Setlist</div>
+        <div class="ci-text">A specially designed set spanning their entire historical repertoire alongside material from "An Hour Before It's Dark." Steve Hogarth and the band at the peak of their powers.</div>
+      </div>
+    </div>
+
+    <div class="pink-floyd-note">
+      <strong>A historic rock location.</strong> This amphitheatre was made famous for rock music by Pink Floyd's legendary 1972 concert film <em>Live at Pompeii</em>, filmed here in 1971 with no audience — just the band and the ancient stones. Now Marillion carry that torch, playing to a full crowd, in the same extraordinary space, 55 years on.
+    </div>
+  </div>
+</div>
+
+<!-- ══ POMPEII ══ -->
+<section id="pompeii">
+  <div class="section-label">Stop One · July 24–26</div>
+  <h2 class="section-title"><em>Pompeii</em></h2>
+  <div class="divider"></div>
+
+  <div class="dest-full">
+    <img class="dest-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Pompeii ruins">
+    <div class="dest-body">
+      <div class="dest-tag tag-pompeii">📍 Pompeii, Campania</div>
+      <div class="dest-title">Frozen in Time</div>
+      <div class="dest-subtitle">The world's most extraordinary archaeological site</div>
+      <p class="dest-description">
+        We're staying at the <strong>Relais Country House</strong> — a beautiful property just a 5-minute walk from the ruins, with a rooftop terrace overlooking the Bay of Naples and Mt. Vesuvius, a lemon grove garden, and an on-site restaurant serving traditional Campanian cuisine. The perfect base for two full days of exploration.
+      </p>
+      <div class="highlights">
+        <div class="highlight">
+          <div class="highlight-icon">🏛️</div>
+          <div class="highlight-text"><strong>Pompeii Ruins</strong>Arrive at 9 AM — the Forum, House of the Faun, the haunting plaster casts</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🌋</div>
+          <div class="highlight-text"><strong>Mt. Vesuvius</strong>Taxi up for crater rim views over the entire Bay of Naples</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🏺</div>
+          <div class="highlight-text"><strong>Herculaneum</strong>One Circumvesuviana stop away — smaller, less crowded, spectacular</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🍽️</div>
+          <div class="highlight-text"><strong>Osteria Nonna Cherubina</strong>On-site restaurant, open 7:30 AM–midnight, traditional Campania food</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRAIANO ══ -->
+<section id="praiano">
+  <div class="section-label">Stop Two · July 27–31</div>
+  <h2 class="section-title"><em>Praiano</em> & the Amalfi Coast</h2>
+  <div class="divider"></div>
+
+  <div class="dest-full">
+    <img class="dest-img" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200&q=80" alt="Praiano Amalfi Coast">
+    <div class="dest-body">
+      <div class="dest-tag tag-praiano">📍 Praiano, Amalfi Coast</div>
+      <div class="dest-title">The Hidden Gem</div>
+      <div class="dest-subtitle">Four unforgettable days suspended between sky and sea</div>
+      <p class="dest-description">
+        We're staying at <strong>Casa Principessa</strong> — a charming 2-bedroom home in the historic center of Praiano with a private terrace described as "like the bow of a ship," overlooking the sea. Rated 4.91 ⭐ by 170 guests. Praiano sits between Positano and Amalfi, quieter and more authentic than both, with the same breathtaking scenery.
+      </p>
+      <div class="highlights">
+        <div class="highlight">
+          <div class="highlight-icon">⛵</div>
+          <div class="highlight-text"><strong>Positano by Boat</strong>15 minutes away — take the boat, not the bus</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🕌</div>
+          <div class="highlight-text"><strong>Amalfi & Ravello</strong>The Duomo, the Paper Museum, and Villa Cimbrone's gardens</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🏝️</div>
+          <div class="highlight-text"><strong>Capri Day Trip</strong>Blue Grotto, Monte Solaro chairlift, the Piazzetta</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🏖️</div>
+          <div class="highlight-text"><strong>Marina di Praia</strong>Praiano's own little beach, tucked between dramatic cliffs</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🍋</div>
+          <div class="highlight-text"><strong>Limoncello</strong>Made from the famous local sfusato amalfitano lemons — try it everywhere</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NAPLES ══ -->
+<section id="naples">
+  <div class="section-label">Stop Three · July 31–Aug 1</div>
+  <h2 class="section-title"><em>Naples</em></h2>
+  <div class="divider"></div>
+
+  <div class="dest-full">
+    <img class="dest-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80" alt="Naples Italy">
+    <div class="dest-body">
+      <div class="dest-tag tag-naples">📍 Naples, Campania</div>
+      <div class="dest-title">The Birthplace of Pizza</div>
+      <div class="dest-subtitle">One glorious night in southern Italy's greatest city</div>
+      <p class="dest-description">
+        We arrive in the afternoon on July 31st and fly home the next day at noon. One night is just enough to explore the UNESCO-listed historic center, walk the famous Spaccanapoli, and — most importantly — eat the best pizza on earth. The art of Neapolitan pizza-making is recognized by UNESCO as intangible cultural heritage.
+      </p>
+      <div class="highlights">
+        <div class="highlight">
+          <div class="highlight-icon">🍕</div>
+          <div class="highlight-text"><strong>Via dei Tribunali</strong>"The street of pizza" — Sorbillo and Di Matteo are both here</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🏙️</div>
+          <div class="highlight-text"><strong>Historic Center</strong>UNESCO World Heritage Site — Spaccanapoli, the underground city</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🌊</div>
+          <div class="highlight-text"><strong>Lungomare</strong>Waterfront promenade with views of Castel dell'Ovo and the bay</div>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">🏰</div>
+          <div class="highlight-text"><strong>Castel dell'Ovo</strong>Ancient clifftop castle overlooking the harbor — free to visit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ITINERARY BAND ══ -->
+<div class="band">
+  <h2>"Not all those who wander are lost."</h2>
+  <p>Day by Day · July 23 – August 1</p>
+</div>
+
+<!-- ══ ITINERARY ══ -->
+<div class="itinerary-full" id="itinerary">
+  <div class="inner">
+    <div class="section-label" style="padding-top:0;">Full Schedule</div>
+    <h2 class="section-title">Day by <em>Day</em></h2>
+    <div class="divider"></div>
+
+    <div class="timeline">
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Thu</div><div class="dom">23</div><div class="month">Jul</div></div>
+        <div class="day-content travel">
+          <h3>✈ Departure Night — Philadelphia</h3>
+          <ul class="day-activities">
+            <li data-icon="🏠">Arrive at PHL Terminal A at least 3 hours early</li>
+            <li data-icon="✈️">BA 1640 departs 10:10 PM — overnight flight to Naples</li>
+            <li data-icon="💺">Try to sleep — it's 8 hours 50 minutes on a Boeing 787!</li>
+          </ul>
+          <div class="day-tip">💡 Eat a good meal before the flight. Confirm baggage allowance — Economy Basic has restrictions.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Fri</div><div class="dom">24</div><div class="month">Jul</div></div>
+        <div class="day-content">
+          <h3>🛬 Arrive Naples → Check in to Pompeii</h3>
+          <ul class="day-activities">
+            <li data-icon="🛬">Land in Naples at 1:00 PM, clear customs, collect bags</li>
+            <li data-icon="🚌">Circumvesuviana train to Pompeii-Scavi (~40 min) or private transfer</li>
+            <li data-icon="🏨">Check in to Relais Country House — freshen up after the overnight flight</li>
+            <li data-icon="🌋">Optional afternoon: taxi up Mt. Vesuvius for crater rim views over the Bay of Naples (2–3 hrs)</li>
+            <li data-icon="🍽️">Dinner at Osteria Nonna Cherubina on-site — no need to go anywhere!</li>
+          </ul>
+          <div class="day-tip">💡 If you have the energy after the overnight flight, Vesuvius is a great first-afternoon option. Otherwise save it — the ruins and concerts are the priority!</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Sat</div><div class="dom">25</div><div class="month">Jul</div></div>
+        <div class="day-content">
+          <h3>🏛️ Pompeii Ruins + 🎸 Marillion Night One <span style="font-size:0.7rem; background:#f0e0d0; color:var(--terracotta); padding:3px 10px; border-radius:10px; font-family:'Montserrat',sans-serif; letter-spacing:1px; vertical-align:middle;">Resale TBC</span></h3>
+          <ul class="day-activities">
+            <li data-icon="🌅">Arrive at the ruins when gates open at 9:00 AM — beat the heat and the crowds</li>
+            <li data-icon="🏛️">4–5 hours exploring: the Forum, House of the Faun, plaster casts, amphitheatre</li>
+            <li data-icon="🌋">Afternoon option: taxi up Mt. Vesuvius — crater rim views over the Bay of Naples</li>
+            <li data-icon="🎸">Evening (if resale tickets secured): <strong>Marillion Night One</strong> at the Anfiteatro di Pompei</li>
+            <li data-icon="🍽️">Alternative evening: dinner at Ristorante President or Caupona</li>
+          </ul>
+          <div class="day-tip">💡 Keep an eye on Ticketone.it and fan forums for resale tickets. Either way, July 25 is a brilliant day — and Sunday night is confirmed!</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Sun</div><div class="dom">26</div><div class="month">Jul</div></div>
+        <div class="day-content">
+          <h3>🏺 Herculaneum + 🎸 Marillion Night Two ✅</h3>
+          <ul class="day-activities">
+            <li data-icon="🏺">Morning: Herculaneum — smaller, less crowded, beautifully preserved (2–3 hrs)</li>
+            <li data-icon="😴">Afternoon rest back at Relais Country House — save your energy for tonight!</li>
+            <li data-icon="🎸">Evening: <strong>Marillion Live at Pompeii — Night Two</strong> (confirmed tickets!)</li>
+            <li data-icon="🎬">The entire show is being filmed for an official live album & Blu-ray — you'll be on it!</li>
+            <li data-icon="🏨">Return to Relais Country House after the concert — last night in Pompeii</li>
+          </ul>
+          <div class="day-tip">💡 Bring a light layer for the amphitheatre evening and comfortable shoes. No rush tonight — you're sleeping right around the corner from the venue!</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Mon</div><div class="dom">27</div><div class="month">Jul</div></div>
+        <div class="day-content praiano">
+          <h3>🚗 Travel to Praiano → Check in to Casa Principessa</h3>
+          <ul class="day-activities">
+            <li data-icon="☕">Lazy morning in Pompeii — post-concert recovery breakfast!</li>
+            <li data-icon="🧳">Check out of Relais Country House and transfer to Praiano (~1.5–2 hrs by private car)</li>
+            <li data-icon="🏠">Check in to <strong>Casa Principessa</strong> after 4:00 PM</li>
+            <li data-icon="🌊">Walk down to Marina di Praia — Praiano's beautiful little beach</li>
+            <li data-icon="🌅">Watch the sunset from your private sea-view terrace with a glass of wine</li>
+          </ul>
+          <div class="day-tip">💡 Book your private transfer in advance — July is peak season. After two big days at Pompeii, let this be a gentle, relaxed arrival day.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Tue</div><div class="dom">28</div><div class="month">Jul</div></div>
+        <div class="day-content praiano">
+          <h3>🌊 Explore Praiano + Positano</h3>
+          <ul class="day-activities">
+            <li data-icon="🏖️">Morning: explore Praiano — stroll the village, visit Marina di Praia beach</li>
+            <li data-icon="⛵">Afternoon: boat to Positano (~15 min) — the alleys, the boutiques, the views</li>
+            <li data-icon="🍋">Evening: dinner near Casa Principessa — try the limoncello!</li>
+          </ul>
+          <div class="day-tip">💡 Always take the boat to Positano — more scenic, avoids the infamous coast road traffic.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Wed</div><div class="dom">29</div><div class="month">Jul</div></div>
+        <div class="day-content praiano">
+          <h3>🕌 Amalfi Town + Ravello</h3>
+          <ul class="day-activities">
+            <li data-icon="⛵">Morning: ferry to Amalfi town — the Duomo, the Paper Museum</li>
+            <li data-icon="🌿">Afternoon: bus up to Ravello — Villa Rufolo and Villa Cimbrone gardens</li>
+            <li data-icon="🍷">Return to Praiano for a sunset dinner</li>
+          </ul>
+          <div class="day-tip">💡 Ravello is cooler than the coast — a lovely escape from the July heat.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Thu</div><div class="dom">30</div><div class="month">Jul</div></div>
+        <div class="day-content praiano">
+          <h3>🏝️ Capri Day Trip</h3>
+          <ul class="day-activities">
+            <li data-icon="⛴️">Full day on Capri — ferry from Positano (~45–60 min, book ahead!)</li>
+            <li data-icon="🔵">Blue Grotto — go early before the tour boat crowds</li>
+            <li data-icon="🪑">Chairlift to Monte Solaro in Anacapri — best views on the entire coast</li>
+            <li data-icon="🛍️">Stroll Capri town and the famous Piazzetta</li>
+          </ul>
+          <div class="day-tip">💡 July is very busy on Capri — start early and book the ferry in advance.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Fri</div><div class="dom">31</div><div class="month">Jul</div></div>
+        <div class="day-content naples">
+          <h3>🌅 Last Morning in Praiano → Naples</h3>
+          <ul class="day-activities">
+            <li data-icon="🌅">Final sunrise from the Casa Principessa terrace — soak it in!</li>
+            <li data-icon="🧳">Check out by 10:00 AM — private transfer to Naples (~1.5 hrs)</li>
+            <li data-icon="🏙️">Afternoon: Spaccanapoli, the underground city (Napoli Sotterranea)</li>
+            <li data-icon="🍕">Dinner on Via dei Tribunali — Sorbillo or Di Matteo!</li>
+            <li data-icon="🌊">Evening stroll along the Lungomare waterfront</li>
+          </ul>
+          <div class="day-tip">💡 Ask your Naples hotel to arrange a taxi to the airport the night before — 9:30 AM latest for a noon flight.</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-date"><div class="dow">Sat</div><div class="dom">1</div><div class="month">Aug</div></div>
+        <div class="day-content travel">
+          <h3>✈ Fly Home to Philadelphia</h3>
+          <ul class="day-activities">
+            <li data-icon="⏰">At Naples airport by 9:30 AM — BA 1639 departs at 12:00 PM</li>
+            <li data-icon="✈️">10 hours 5 minutes on the Boeing 787</li>
+            <li data-icon="🏠">Arrive Philadelphia 4:05 PM — home by early evening!</li>
+          </ul>
+          <div class="day-tip">💡 10 unforgettable days in southern Italy ✅ &nbsp; Start planning the next trip on the flight home!</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOD ══ -->
+<section id="food">
+  <div class="section-label">Must-Try Dishes</div>
+  <h2 class="section-title">The <em>Food</em></h2>
+  <div class="divider"></div>
+  <p style="font-size:1.15rem;line-height:1.8;color:#555;max-width:680px;margin-bottom:0;">Two dishes you absolutely must try on the Amalfi Coast — both unique to this region and impossible to replicate anywhere else in the world.</p>
+
+  <div class="food-grid">
+    <div class="food-card">
+      <img class="food-img" src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80" alt="Scialatielli pasta seafood">
+      <div class="food-body">
+        <div class="food-title">Scialatielli</div>
+        <div class="food-subtitle">The Amalfi Coast's own pasta, born in Positano in 1978</div>
+        <p class="food-desc">A thick, short, chewy fresh pasta made with flour, milk, basil and pecorino — so it already has flavor before any sauce is added. Almost always served with seafood: mixed frutti di mare, clams in white wine, or the splurge version with lobster. The robust texture holds up beautifully to briny, fresh seafood sauces. Order it everywhere you see it.</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img class="food-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80" alt="Lemon dessert">
+      <div class="food-body">
+        <div class="food-title">Delizia al Limone</div>
+        <div class="food-subtitle">The lemon dessert that tastes like the Amalfi Coast itself</div>
+        <p class="food-desc">A dome-shaped individual cake filled with lemon pastry cream, soaked in lemon syrup, and covered in a cloud of lemon chantilly. The lemons here (sfusato amalfitano) are a special local variety — larger, sweeter, and more fragrant than any lemon you've tasted before. This dessert is bright, creamy, refreshing, and utterly unforgettable in the July heat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESTAURANTS BAND ══ -->
+<div class="band" style="background:var(--olive);">
+  <h2>"First, we eat."</h2>
+  <p>Restaurant Recommendations · By Destination</p>
+</div>
+
+<!-- ══ RESTAURANTS ══ -->
+<section id="restaurants">
+  <div class="section-label">Where to Eat</div>
+  <h2 class="section-title">Our <em>Restaurant</em> Guide</h2>
+  <div class="divider"></div>
+
+  <div class="section-label" style="margin-top:0; color: var(--terracotta);">🏛️ Pompeii</div>
+  <div class="restaurant-grid">
+    <div class="restaurant-card">
+      <div class="rest-location">Pompeii · On-site</div>
+      <div class="rest-name">Osteria Nonna Cherubina</div>
+      <div class="rest-vibe">Traditional Campania · Open daily 7:30 AM–midnight</div>
+      <p class="rest-desc">At your hotel. Perfect for the first night after the long journey. Traditional, authentic, no need to go anywhere.</p>
+    </div>
+    <div class="restaurant-card">
+      <div class="rest-location">Pompeii · Casual Lunch</div>
+      <div class="rest-name">Na' Pasta</div>
+      <div class="rest-vibe">Pasta bar · Dishes under €10</div>
+      <p class="rest-desc">Unassuming exterior, extraordinary pasta. Locals eat here. Generous portions of the freshest Campanian pasta dishes. A genuine hidden gem.</p>
+    </div>
+    <div class="restaurant-card">
+      <div class="rest-location">Pompeii · Fun Dinner</div>
+      <div class="rest-name">Caupona</div>
+      <div class="rest-vibe">Ancient Roman-themed · Near Porta Marina</div>
+      <p class="rest-desc">Vivid frescoes, ancient Roman-inspired dishes, a totally unique dining experience. Especially fun for the family.</p>
+    </div>
+    <div class="restaurant-card">
+      <div class="rest-location">Pompeii · Special Occasion</div>
+      <div class="rest-name">Ristorante President</div>
+      <div class="rest-vibe">⭐ Michelin Star · Fine dining</div>
+      <p class="rest-desc">Chef Paolo Gramaglia's Michelin-starred restaurant. Reviewers call it one of the best meals of their lives. Book well in advance.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:3rem; color: var(--navy);">🌊 Praiano & Amalfi Coast</div>
+  <div class="restaurant-grid">
+    <div class="restaurant-card praiano">
+      <div class="rest-location">Praiano · Seafood</div>
+      <div class="rest-name">Ristorante Franchino</div>
+      <div class="rest-vibe">Fresh seafood · Sunset views</div>
+      <p class="rest-desc">On the east side of town, perfect for sunset dinners with atmospheric sea views. Homemade pasta and fresh seafood.</p>
+    </div>
+    <div class="restaurant-card praiano">
+      <div class="rest-location">Praiano · Romantic Terrace</div>
+      <div class="rest-name">La Moressa</div>
+      <div class="rest-vibe">Mediterranean seafood · Daily specials</div>
+      <p class="rest-desc">Cozy terrace with stunning sea views. Fresh seafood sourced daily. Chef's nightly special menu. Don't miss the attached deli.</p>
+    </div>
+    <div class="restaurant-card praiano">
+      <div class="rest-location">Praiano · Meat & Seafood</div>
+      <div class="rest-name">Kasai</div>
+      <div class="rest-vibe">Modern · Unequalled terrace views</div>
+      <p class="rest-desc">Incredible meat dishes alongside classic seafood, with some of the best terrace views on the entire Amalfi Coast.</p>
+    </div>
+    <div class="restaurant-card praiano">
+      <div class="rest-location">Praiano · Casual & Family</div>
+      <div class="rest-name">La Strada</div>
+      <div class="rest-vibe">Family trattoria · Views of Positano</div>
+      <p class="rest-desc">A few steps from Casa Principessa. Fresh seafood, great meats, curated wine list. Panoramic terrace overlooking Positano.</p>
+    </div>
+    <div class="restaurant-card praiano">
+      <div class="rest-location">Praiano · Drinks & Snacks</div>
+      <div class="rest-name">Café Mirante</div>
+      <div class="rest-vibe">Bar · Free bruschetta with drinks!</div>
+      <p class="rest-desc">On the path to La Gavitella beach. Free bruschetta with every drink order. One of the most breathtaking views on the coast.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:3rem; color: #B8730A;">🍕 Naples</div>
+  <div class="restaurant-grid">
+    <div class="restaurant-card naples">
+      <div class="rest-location">Naples · The Pilgrimage</div>
+      <div class="rest-name">Gino Sorbillo</div>
+      <div class="rest-vibe">Via dei Tribunali, 32 · Est. 1935</div>
+      <p class="rest-desc">Widely considered the best pizza in Italy. The Sorbillo family has been making pizza since 1935. Expect a line — arrive before it opens.</p>
+    </div>
+    <div class="restaurant-card naples">
+      <div class="rest-location">Naples · Classic & Cheap</div>
+      <div class="rest-name">Antica Pizzeria Di Matteo</div>
+      <div class="rest-vibe">Via dei Tribunali, 94 · Est. 1936</div>
+      <p class="rest-desc">Serving pizza since 1936. Even President Clinton came. Excellent pizza for €2–6. Great for a quick authentic bite without the Sorbillo wait.</p>
+    </div>
+    <div class="restaurant-card naples">
+      <div class="rest-location">Naples · Legendary Simplicity</div>
+      <div class="rest-name">L'Antica Pizzeria da Michele</div>
+      <div class="rest-vibe">Via Cesare Sersale · Est. 1906</div>
+      <p class="rest-desc">Serving since 1906 — only two choices: margherita or marinara. Featured in Eat, Pray, Love. Only €6 for the best margherita of your life.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHRASES ══ -->
+<section id="phrases">
+  <div class="section-label">Pocket Guide</div>
+  <h2 class="section-title">Italian <em>Phrases</em></h2>
+  <div class="divider"></div>
+  <p style="font-size:1.15rem;line-height:1.8;color:#555;max-width:680px;margin-bottom:0;">You don't need to speak Italian to get by — but a few words go a long way. Italians genuinely appreciate any attempt. Pronunciations in brackets.</p>
+
+  <div class="phrases-grid">
+
+    <div class="phrase-category">
+      <div class="phrase-cat-header">
+        <span class="phrase-cat-icon">👋</span>
+        <span class="phrase-cat-title">Greetings & Basics</span>
+      </div>
+      <div class="phrase-list">
+        <div class="phrase-item">
+          <div class="phrase-italian">Buongiorno</div>
+          <div class="phrase-english">Good morning / Good day<span class="pronun">bwon-JOR-no</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Buonasera</div>
+          <div class="phrase-english">Good evening<span class="pronun">bwona-SAIR-a</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Ciao</div>
+          <div class="phrase-english">Hi / Bye (informal)<span class="pronun">chow</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Per favore</div>
+          <div class="phrase-english">Please<span class="pronun">pair fa-VOR-ay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Grazie</div>
+          <div class="phrase-english">Thank you<span class="pronun">GRAT-see-ay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Prego</div>
+          <div class="phrase-english">You're welcome / Go ahead<span class="pronun">PRAY-go</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Scusi</div>
+          <div class="phrase-english">Excuse me / Sorry<span class="pronun">SKOO-zee</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Sì / No</div>
+          <div class="phrase-english">Yes / No<span class="pronun">see / no</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Non capisco</div>
+          <div class="phrase-english">I don't understand<span class="pronun">non ka-PEES-ko</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Parla inglese?</div>
+          <div class="phrase-english">Do you speak English?<span class="pronun">PAR-la in-GLAY-zay</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phrase-category">
+      <div class="phrase-cat-header">
+        <span class="phrase-cat-icon">🍽️</span>
+        <span class="phrase-cat-title">At the Restaurant</span>
+      </div>
+      <div class="phrase-list">
+        <div class="phrase-item">
+          <div class="phrase-italian">Un tavolo per quattro</div>
+          <div class="phrase-english">A table for four<span class="pronun">oon TAV-olo pair KWAT-ro</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Il menù, per favore</div>
+          <div class="phrase-english">The menu, please<span class="pronun">eel meh-NOO</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Cosa consiglia?</div>
+          <div class="phrase-english">What do you recommend?<span class="pronun">KO-za con-SEEL-ya</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Vorrei...</div>
+          <div class="phrase-english">I would like...<span class="pronun">vor-RAY</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Delizioso!</div>
+          <div class="phrase-english">Delicious!<span class="pronun">de-leet-zee-OH-zo</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Il conto, per favore</div>
+          <div class="phrase-english">The bill, please<span class="pronun">eel KON-to</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Senza glutine</div>
+          <div class="phrase-english">Gluten free<span class="pronun">SEN-za GLOO-tee-nay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Sono allergico a...</div>
+          <div class="phrase-english">I'm allergic to...<span class="pronun">SO-no al-AIR-jee-ko a</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Acqua naturale / frizzante</div>
+          <div class="phrase-english">Still / sparkling water<span class="pronun">AK-wa nat-ur-AH-lay / freet-ZAN-tay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Un caffè, per favore</div>
+          <div class="phrase-english">An espresso, please<span class="pronun">oon kaf-FAY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phrase-category">
+      <div class="phrase-cat-header">
+        <span class="phrase-cat-icon">🗺️</span>
+        <span class="phrase-cat-title">Getting Around</span>
+      </div>
+      <div class="phrase-list">
+        <div class="phrase-item">
+          <div class="phrase-italian">Dov'è...?</div>
+          <div class="phrase-english">Where is...?<span class="pronun">do-VAY</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">A destra / sinistra</div>
+          <div class="phrase-english">Right / Left<span class="pronun">a DES-tra / see-NEES-tra</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Sempre dritto</div>
+          <div class="phrase-english">Straight ahead<span class="pronun">SEM-pray DREET-to</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Quanto costa?</div>
+          <div class="phrase-english">How much does it cost?<span class="pronun">KWAN-to KOS-ta</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Un biglietto per...</div>
+          <div class="phrase-english">A ticket to...<span class="pronun">oon beel-YET-to pair</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">A che ora parte?</div>
+          <div class="phrase-english">What time does it leave?<span class="pronun">a kay OR-a PAR-tay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Chiuso</div>
+          <div class="phrase-english">Closed<span class="pronun">kee-OO-zo</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Aperto</div>
+          <div class="phrase-english">Open<span class="pronun">a-PAIR-to</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phrase-category">
+      <div class="phrase-cat-header">
+        <span class="phrase-cat-icon">🚨</span>
+        <span class="phrase-cat-title">Emergencies</span>
+      </div>
+      <div class="phrase-list">
+        <div class="phrase-item">
+          <div class="phrase-italian">Aiuto!</div>
+          <div class="phrase-english">Help!<span class="pronun">ah-YOO-to</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Chiami un medico!</div>
+          <div class="phrase-english">Call a doctor!<span class="pronun">kee-AH-mee oon MED-ee-ko</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Chiami la polizia!</div>
+          <div class="phrase-english">Call the police!<span class="pronun">kee-AH-mee la po-LEET-see-a</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Mi sono perso/a</div>
+          <div class="phrase-english">I am lost<span class="pronun">mee SO-no PAIR-so/a</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Ho bisogno di aiuto</div>
+          <div class="phrase-english">I need help<span class="pronun">o bee-ZON-yo dee ah-YOO-to</span></div>
+        </div>
+        <div class="phrase-item" style="background:#fff8f8;">
+          <div class="phrase-italian" style="color:#c0392b;">112</div>
+          <div class="phrase-english">Emergency (Police, Fire, Ambulance)<span class="pronun">Works from any phone in Italy</span></div>
+        </div>
+        <div class="phrase-item" style="background:#fff8f8;">
+          <div class="phrase-italian" style="color:#c0392b;">118</div>
+          <div class="phrase-english">Medical emergency / Ambulance<span class="pronun">Works from any phone in Italy</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phrase-category">
+      <div class="phrase-cat-header">
+        <span class="phrase-cat-icon">🎸</span>
+        <span class="phrase-cat-title">Concert & Culture</span>
+      </div>
+      <div class="phrase-list">
+        <div class="phrase-item">
+          <div class="phrase-italian">Che spettacolo!</div>
+          <div class="phrase-english">What a show!<span class="pronun">kay spet-TAK-olo</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Fantastico!</div>
+          <div class="phrase-english">Fantastic!<span class="pronun">fan-TAS-tee-ko</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Magnifico!</div>
+          <div class="phrase-english">Magnificent!<span class="pronun">man-YEE-fee-ko</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Dov'è il bagno?</div>
+          <div class="phrase-english">Where's the bathroom?<span class="pronun">do-VAY eel BAN-yo</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">È vietato fotografare</div>
+          <div class="phrase-english">Photography is not allowed<span class="pronun">ay vee-ay-TAH-to foto-gra-FAR-ay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Che bella vista!</div>
+          <div class="phrase-english">What a beautiful view!<span class="pronun">kay BEL-la VEES-ta</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Salute!</div>
+          <div class="phrase-english">Cheers! (toast)<span class="pronun">sa-LOO-tay</span></div>
+        </div>
+        <div class="phrase-item">
+          <div class="phrase-italian">Un gelato, per favore</div>
+          <div class="phrase-english">A gelato, please<span class="pronun">oon jel-AH-to</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TIPS ══ -->
+<section id="tips">
+  <div class="section-label">Before You Go</div>
+  <h2 class="section-title">Essential <em>Tips</em></h2>
+  <div class="divider"></div>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <span class="tip-icon">🛂</span>
+      <div class="tip-title">No ETIAS Needed</div>
+      <p class="tip-text">ETIAS doesn't launch until late 2026 — after your trip. All you need are valid US passports. Check they're valid through at least November 1, 2026 (3 months after departure).</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">🧳</span>
+      <div class="tip-title">Pack Light</div>
+      <p class="tip-text">The Amalfi Coast means hundreds of stairs. Heavy luggage is a nightmare. Pack light, and confirm baggage allowance — your Economy Basic tickets have restrictions.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">🌡️</span>
+      <div class="tip-title">Beat the Heat</div>
+      <p class="tip-text">July is hot — especially in Pompeii and Naples. Schedule outdoor sightseeing for early morning and evening. Afternoon rest time is the Italian way for good reason!</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">🎟️</span>
+      <div class="tip-title">Book in Advance</div>
+      <p class="tip-text">Reserve Pompeii ruins entry, Capri ferry tickets, and Praiano restaurants well before you go. July is peak season and things sell out fast.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">⛵</span>
+      <div class="tip-title">Take the Boat</div>
+      <p class="tip-text">Whenever possible on the Amalfi Coast, travel by boat rather than the coast road bus. Faster, more scenic, and avoids the notoriously congested SS163 highway.</p>
+    </div>
+    <div class="tip-card">
+      <span class="tip-icon">🍋</span>
+      <div class="tip-title">Try Everything</div>
+      <p class="tip-text">Scialatielli, delizia al limone, limoncello, Neapolitan pizza, sfusato amalfitano lemons. These flavors are unique to this corner of Italy — eat adventurously!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <strong>🇮🇹 Buon Viaggio!</strong>
+  Philadelphia → Naples · July 23 – August 1, 2026<br><br>
+  Pompeii &nbsp;·&nbsp; Herculaneum &nbsp;·&nbsp; Mt. Vesuvius &nbsp;·&nbsp; Praiano &nbsp;·&nbsp; Positano &nbsp;·&nbsp; Amalfi &nbsp;·&nbsp; Ravello &nbsp;·&nbsp; Capri &nbsp;·&nbsp; Naples
+</footer>
+
+<script>
+  // ── COUNTDOWN ──
+  const departure = new Date('2026-07-23T22:10:00-04:00'); // 10:10 PM Eastern
+  function updateCountdown() {
+    const now = new Date();
+    const diff = departure - now;
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML = '<span class="departed-msg">🇮🇹 Buon viaggio! The adventure has begun!</span>';
+      return;
+    }
+    const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('cd-days').textContent  = String(days);
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(secs).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ── PWA INSTALL PROMPT ──
+  let deferredPrompt;
+  const banner = document.getElementById('install-banner');
+  const dismiss = document.getElementById('install-dismiss');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    banner.style.display = 'flex';
+  });
+
+  banner.addEventListener('click', async (e) => {
+    if (e.target === dismiss) {
+      banner.style.display = 'none';
+      return;
+    }
+    banner.style.display = 'none';
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    banner.style.display = 'none';
+  });
+
+  // ── SERVICE WORKER ──
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>
